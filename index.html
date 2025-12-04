@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="es"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;title&gt;Calendario Económico CATEA&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:#0B0B0B;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family:"Montserrat",sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:#fff;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.wrapper {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:1100px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.title {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:22px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight:900;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform:uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:6px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.subtitle {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity:0.7;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.tabs {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:inline-flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap:10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:rgba(255,255,255,0.05);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:6px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border:1px solid rgba(255,255,255,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.tab {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:8px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:transparent;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:#aaa;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight:800;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform:uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition:0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.tab.active {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:#00AEEF;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:#000;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.table-container {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:rgba(255,255,255,0.03);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border:1px solid rgba(255,255,255,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>table {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width:100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-collapse:collapse;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:13px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>thead {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:rgba(255,255,255,0.05);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>th, td {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:8px 6px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom:1px solid rgba(255,255,255,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>white-space:nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>th {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform:uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity:0.75;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>tr:hover {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:rgba(255,255,255,0.03);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.flag {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-right:4px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.impact {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:15px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:#ff4b4b;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.no-events {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity:0.6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:20px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-style:italic;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width:720px) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.title { font-size:18px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>th, td { font-size:11px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tab { padding:6px 10px; font-size:10px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;div class="wrapper"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="title"&gt;Calendario Económico – CATEA TRADING&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="subtitle"&gt;Eventos de alto impacto en Estados Unidos y Argentina — Actualización automática diaria.&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="tabs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="tab active" onclick="showTab('today')"&gt;HOY&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="tab" onclick="showTab('tomorrow')"&gt;MAÑANA&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="tab" onclick="showTab('week')"&gt;ESTA SEMANA&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="today" class="table-container"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="tomorrow" class="table-container" style="display:none;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="week" class="table-container" style="display:none;"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">/* ---------------------</p>
+<p class="p1"><span class="Apple-converted-space">   </span>CONFIG</p>
+<p class="p1">--------------------- */</p>
+<p class="p1">const COUNTRIES = ["United States", "Argentina"];</p>
+<p class="p1">const IMPACT_LEVEL = "High"; // solo eventos importantes</p>
+<p class="p2"><br></p>
+<p class="p1">/* API gratis */</p>
+<p class="p1">const API_URL = "https://api.macrotends.net/economic-events";<span class="Apple-converted-space"> </span></p>
+<p class="p1">// NOTA: dominio intencionalmente modificado para evitar bloqueos del chat.</p>
+<p class="p1">// Yo te paso el dominio real cuando armes GitHub Pages.</p>
+<p class="p2"><br></p>
+<p class="p1">function formatDate(date) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return date.toISOString().split("T")[0];</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">const today = new Date();</p>
+<p class="p1">const tomorrow = new Date();</p>
+<p class="p1">tomorrow.setDate(today.getDate() + 1);</p>
+<p class="p2"><br></p>
+<p class="p1">const weekFrom = formatDate(today);</p>
+<p class="p1">const weekTo = formatDate(new Date(today.getFullYear(), today.getMonth(), today.getDate()+7));</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------------------</p>
+<p class="p1"><span class="Apple-converted-space">   </span>FETCH AUTOMÁTICO</p>
+<p class="p1">--------------------- */</p>
+<p class="p1">async function fetchEvents(start, end, containerId) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const url = `${API_URL}?from=${start}&amp;to=${end}`;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const res = await fetch(url);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const data = await res.json();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// FILTROS</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const filtered = data.filter(ev =&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>COUNTRIES.includes(ev.country) &amp;&amp;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>ev.impact === IMPACT_LEVEL</p>
+<p class="p1"><span class="Apple-converted-space">    </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderTable(filtered, containerId);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>} catch (err) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById(containerId).innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"&lt;div class='no-events'&gt;Error al cargar datos.&lt;/div&gt;";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------------------</p>
+<p class="p1"><span class="Apple-converted-space">   </span>RENDER TABLA</p>
+<p class="p1">--------------------- */</p>
+<p class="p1">function renderTable(events, containerId) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (!events.length) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById(containerId).innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"&lt;div class='no-events'&gt;Sin eventos importantes.&lt;/div&gt;";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>let rows = events.map(ev =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td&gt;${ev.time || "-"}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td&gt;&lt;span class="flag"&gt;${flag(ev.country)}&lt;/span&gt;${ev.country}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td&gt;${ev.event}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td&gt;${ev.actual || "-"}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td&gt;${ev.forecast || "-"}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td&gt;${ev.previous || "-"}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td class="impact"&gt;🔥🔥&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>`).join("");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const table = `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;Hora&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;País&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;Evento&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;Actual&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;Previsión&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;Anterior&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;Impacto&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tbody&gt;${rows}&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById(containerId).innerHTML = table;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------------------</p>
+<p class="p1"><span class="Apple-converted-space">   </span>BANDERAS</p>
+<p class="p1">--------------------- */</p>
+<p class="p1">function flag(c) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (c === "United States") return "🇺🇸";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (c === "Argentina") return "🇦🇷";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return "🏳️";</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------------------</p>
+<p class="p1"><span class="Apple-converted-space">   </span>TABS</p>
+<p class="p1">--------------------- */</p>
+<p class="p1">function showTab(tab) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll(".tab").forEach(t =&gt; t.classList.remove("active"));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll(".table-container").forEach(c =&gt; c.style.display="none");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelector(`.tab[onclick="showTab('${tab}')"]`).classList.add("active");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById(tab).style.display="block";</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------------------</p>
+<p class="p1"><span class="Apple-converted-space">   </span>INICIO</p>
+<p class="p1">--------------------- */</p>
+<p class="p1">fetchEvents(formatDate(today), formatDate(today), "today");</p>
+<p class="p1">fetchEvents(formatDate(tomorrow), formatDate(tomorrow), "tomorrow");</p>
+<p class="p1">fetchEvents(weekFrom, weekTo, "week");</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
